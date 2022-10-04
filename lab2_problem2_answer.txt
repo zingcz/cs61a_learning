@@ -1,0 +1,82 @@
+---------------------------------------------------------------------
+Higher Order Functions > Suite 1 > Case 1
+(cases remaining: 2)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> def even(f):
+...     def odd(x):
+...         if x < 0:
+...             return f(-x)
+...         return f(x)
+...     return odd
+>>> steven = lambda x: x
+>>> stewart = even(steven)
+>>> stewart
+? Function
+-- OK! --
+
+>>> stewart(61)
+? 61
+-- OK! --
+
+>>> stewart(-4)
+? 4
+-- OK! --
+
+---------------------------------------------------------------------
+Higher Order Functions > Suite 1 > Case 2
+(cases remaining: 1)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> def cake():
+...    print('beets')
+...    def pie():
+...        print('sweets')
+...        return 'cake'
+...    return pie
+>>> chocolate = cake()
+? beets
+-- OK! --
+
+>>> chocolate
+? Function
+-- OK! --
+
+>>> chocolate()
+(line 1)? sweets
+(line 2)? 'cake'
+-- OK! --
+
+>>> more_chocolate, more_cake = chocolate(), cake
+? sweets
+-- OK! --
+
+>>> more_chocolate
+? 'cake'
+-- OK! --
+
+>>> def snake(x, y):
+...    if cake == more_cake:
+...        return chocolate
+...    else:
+...        return x + y
+>>> snake(10, 20)
+? Function
+-- OK! --
+
+>>> snake(10, 20)()
+(line 1)? sweets
+(line 2)? 'cake'
+-- OK! --
+
+>>> cake = 'cake'
+>>> snake(10, 20)
+? 30
+-- OK! --
+
+---------------------------------------------------------------------
+OK! All cases for Higher Order Functions unlocked.
